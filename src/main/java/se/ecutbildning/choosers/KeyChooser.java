@@ -30,7 +30,8 @@ public class KeyChooser extends LabeledChooser{
 
         setOnAction(event -> {
             OptionsHolder.setCurrentKeyNum(OptionsHolder.symbolToNoteNum((String)getValue()));
-            MidiPianoPlayer.updateAllNotePanes();
+            MidiPianoPlayer
+                    .updateAllNotePanes();
         });
 
 

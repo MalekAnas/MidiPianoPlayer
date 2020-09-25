@@ -20,6 +20,10 @@ import javax.sound.midi.Synthesizer;
  *
  * This Application is a  MidiPianoPlayer
  *
+ *
+ * TODO s: 1-add a real piano layout.
+ *         2-add recording functionality.
+ *
  */
 public class MidiPianoPlayer extends Application {
 
@@ -233,13 +237,18 @@ public class MidiPianoPlayer extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        primaryStage.setScene(new Scene(root, 780,420));
+
+        primaryStage.setScene(new Scene(root, 1080,600));
         primaryStage.setResizable(false);
-        //set the title
+
+
+        //set the title of the App
         primaryStage.setTitle("Midi Piano Player");
+        //set the icon of the App
         primaryStage.getIcons().add(new Image(String.valueOf(MidiPianoPlayer.class.getResource("/pngs/silver_piano.png"))));
 
 
+        //show the root stage
         primaryStage.show();
 
         arrangeNotePanesInKeyboardPattern();
